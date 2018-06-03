@@ -125,7 +125,7 @@ public class Domino implements GameListener {
             } else {
                 startComputer(getRandomBone(startComputerActiveBones));
             }
-        // Иначе, если дубль у компьютера
+            // Иначе, если дубль у компьютера
         } else if (computerBone.isDuplicate()) {
             startComputer(getRandomBone(startComputerActiveBones));
         } else {
@@ -138,8 +138,8 @@ public class Domino implements GameListener {
                 startPlayer(startPlayerActiveBones);
             } else if (playerSum > computerSum) {
                 startComputer(getRandomBone(startComputerActiveBones));
-            // Если же кости игрока и компьютера равны по весу, выбрать рандомно того, кто будет ходить первым
-            } else if ((int) (Math.random() * 2) == 0){
+                // Если же кости игрока и компьютера равны по весу, выбрать рандомно того, кто будет ходить первым
+            } else if ((int) (Math.random() * 2) == 0) {
                 startPlayer(startPlayerActiveBones);
             } else {
                 startComputer(getRandomBone(startComputerActiveBones));
@@ -148,7 +148,7 @@ public class Domino implements GameListener {
     }
 
     // Метод для получения активных костей в начале игры (которые можно положить на стол)
-    private ArrayList<Bone> getStartActiveBone (ArrayList<Bone> bones) {
+    private ArrayList<Bone> getStartActiveBone(ArrayList<Bone> bones) {
         Bone activeDuplicateBone = null;
         int minSum = 12;
         int tempMinDuplicate = 7;
@@ -162,8 +162,8 @@ public class Domino implements GameListener {
                     tempMinDuplicate = firstPart;
                 }
             } else {
-                final int tempSum = bone.getFirstPart() + bone.getSecondPart();;
-                if (tempSum < minSum){
+                final int tempSum = bone.getFirstPart() + bone.getSecondPart();
+                if (tempSum < minSum) {
                     minSum = tempSum;
                 }
             }
@@ -223,7 +223,7 @@ public class Domino implements GameListener {
         if (isFish()) {
             status = DEADEND;
             end();
-        // Если базар кончился, а компьютер так и не нашёл подходящую кость
+            // Если базар кончился, а компьютер так и не нашёл подходящую кость
         } else if (activeComputerBones.isEmpty()) {
             move = PLAYER;
             playerMove();
@@ -266,7 +266,7 @@ public class Domino implements GameListener {
         if (isFish()) {
             status = DEADEND;
             end();
-        // Если базар кончился, а игрок так и не нашёл подходящую кость
+            // Если базар кончился, а игрок так и не нашёл подходящую кость
         } else if (activePlayerBones.isEmpty()) {
             move = COMPUTER;
             computerMove();
@@ -378,7 +378,7 @@ public class Domino implements GameListener {
     }
 
     // Метод для получения активных костей (которые можно положить на стол)
-    private ArrayList<Bone> getActiveBones (ArrayList<Bone> bones) {
+    private ArrayList<Bone> getActiveBones(ArrayList<Bone> bones) {
         ArrayList<Bone> activeBones = new ArrayList<Bone>();
         for (Bone bone : bones) {
             final int firstPart = bone.getFirstPart();

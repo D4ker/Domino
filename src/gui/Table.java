@@ -142,7 +142,7 @@ public class Table extends DominoPanel implements TableListener {
             return true;
         } else if (firstPart == leftMove && secondPart == rightMove) {
             return true;
-        } else  if (firstPart == rightMove && secondPart == leftMove){
+        } else if (firstPart == rightMove && secondPart == leftMove) {
             return true;
         }
 
@@ -193,7 +193,7 @@ public class Table extends DominoPanel implements TableListener {
                         createStartMove(selectedBone);
                     }
                 }
-            } else if (mode != NONE){
+            } else if (mode != NONE) {
                 mode = NONE;
                 repaint();
             }
@@ -216,7 +216,7 @@ public class Table extends DominoPanel implements TableListener {
                 gameListener.setLeftMove(leftMove);
             }
 
-            switch(++leftCounter) {
+            switch (++leftCounter) {
                 case 2:
                     leftDirection = UP;
                     if (!oldLeftBone.isDuplicate()) {
@@ -260,7 +260,7 @@ public class Table extends DominoPanel implements TableListener {
                 gameListener.setRightMove(rightMove);
             }
 
-            switch(++rightCounter) {
+            switch (++rightCounter) {
                 case 2:
                     rightDirection = DOWN;
                     if (!oldRightBone.isDuplicate()) {
@@ -382,7 +382,7 @@ public class Table extends DominoPanel implements TableListener {
         final int secondPart = newBone.getSecondPart();
         final int oldBoneX = oldBone.getX();
         final int oldBoneY = oldBone.getY();
-        
+
         switch (direction) {
             case LEFT:
                 if (oldBone.getOrientation() == Bone.HORIZONTAL) {
@@ -502,17 +502,17 @@ public class Table extends DominoPanel implements TableListener {
             final int orientation = bone.getOrientation();
 
             Image img = getBoneImage(orientation);
-            g.drawImage(img, boneX, boneY, new Color(0, 0, 0, transparency),null);
+            g.drawImage(img, boneX, boneY, new Color(0, 0, 0, transparency), null);
             if (orientation == Bone.VERTICAL) {
                 img = getPointsImage(bone.getFirstPart(), orientation);
-                g.drawImage(img, boneX, boneY + 36, new Color(0, 0, 0, transparency),null);
+                g.drawImage(img, boneX, boneY + 36, new Color(0, 0, 0, transparency), null);
                 img = getPointsImage(bone.getSecondPart(), orientation);
-                g.drawImage(img, boneX, boneY, new Color(0, 0, 0, transparency),null);
+                g.drawImage(img, boneX, boneY, new Color(0, 0, 0, transparency), null);
             } else {
                 img = getPointsImage(bone.getFirstPart(), orientation);
-                g.drawImage(img, boneX, boneY, new Color(0, 0, 0, transparency),null);
+                g.drawImage(img, boneX, boneY, new Color(0, 0, 0, transparency), null);
                 img = getPointsImage(bone.getSecondPart(), orientation);
-                g.drawImage(img, boneX + 36, boneY, new Color(0, 0, 0, transparency),null);
+                g.drawImage(img, boneX + 36, boneY, new Color(0, 0, 0, transparency), null);
             }
         } catch (IOException e) {
             // Ничего делать не нужно
