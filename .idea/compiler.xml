@@ -3,8 +3,8 @@
   <component name="CompilerConfiguration">
     <annotationProcessing>
       <profile name="Annotation profile for Domino" enabled="true">
-        <sourceOutputDir name="out/production/game/generated-sources/annotations" />
-        <sourceTestOutputDir name="out/production/game/generated-test-sources/test-annotations" />
+        <sourceOutputDir name="out/game/generated-sources/annotations" />
+        <sourceTestOutputDir name="out/game/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Domino" />
       </profile>

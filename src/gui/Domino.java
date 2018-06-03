@@ -292,11 +292,11 @@ public class Domino implements GameListener {
                 break;
             case DEADEND:
                 if (move == PLAYER) {
-                    text = "Вы поставили рыбу!";
-                    computerScore += getScore(computerBones);
-                } else {
                     text = "Компьютер поставил рыбу!";
                     playerScore += getScore(playerBones);
+                } else {
+                    text = "Вы поставили рыбу!";
+                    computerScore += getScore(computerBones);
                 }
                 break;
         }

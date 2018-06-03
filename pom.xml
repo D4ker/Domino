@@ -9,10 +9,10 @@
     <build>
         <resources>
             <resource>
-                <directory>img</directory>
+                <directory>resources</directory>
             </resource>
         </resources>
-        <directory>out/production/game</directory>
+        <directory>out/game</directory>
         <sourceDirectory>src</sourceDirectory>
         <testSourceDirectory>test</testSourceDirectory>
         <plugins>

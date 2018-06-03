@@ -87,9 +87,9 @@ public class DominoPanel extends JPanel {
     protected Image getBoneImage(int orientation) throws IOException {
         switch (orientation) {
             case Bone.VERTICAL:
-                return ImageIO.read(new File("img/frontV.png"));
+                return ImageIO.read(getClass().getResource("/img/frontV.png"));
             case Bone.HORIZONTAL:
-                return ImageIO.read(new File("img/frontH.png"));
+                return ImageIO.read(getClass().getResource("/img/frontH.png"));
             default:
                 throw new IllegalArgumentException();
         }
@@ -127,9 +127,9 @@ public class DominoPanel extends JPanel {
     protected Image getBacksideBoneImage(int orientation) throws IOException {
         switch (orientation) {
             case Bone.VERTICAL:
-                return ImageIO.read(new File("img/backsideV.png"));
+                return ImageIO.read(getClass().getResource("/img/backsideV.png"));
             case Bone.HORIZONTAL:
-                return ImageIO.read(new File("img/backsideH.png"));
+                return ImageIO.read(getClass().getResource("/img/backsideH.png"));
             default:
                 throw new IllegalArgumentException();
         }
@@ -139,28 +139,28 @@ public class DominoPanel extends JPanel {
     protected Image getPointsImage(int points, int orientation) throws IOException {
         switch (points) {
             case 0:
-                return ImageIO.read(new File("img/zero.png"));
+                return ImageIO.read(getClass().getResource("/img/zero.png"));
             case 1:
-                return ImageIO.read(new File("img/one.png"));
+                return ImageIO.read(getClass().getResource("/img/one.png"));
             case 2:
                 if (orientation == Bone.VERTICAL) {
-                    return ImageIO.read(new File("img/twoV.png"));
+                    return ImageIO.read(getClass().getResource("/img/twoV.png"));
                 }
-                return ImageIO.read(new File("img/twoH.png"));
+                return ImageIO.read(getClass().getResource("/img/twoH.png"));
             case 3:
                 if (orientation == Bone.VERTICAL) {
-                    return ImageIO.read(new File("img/threeV.png"));
+                    return ImageIO.read(getClass().getResource("/img/threeV.png"));
                 }
-                return ImageIO.read(new File("img/threeH.png"));
+                return ImageIO.read(getClass().getResource("/img/threeH.png"));
             case 4:
-                return ImageIO.read(new File("img/four.png"));
+                return ImageIO.read(getClass().getResource("/img/four.png"));
             case 5:
-                return ImageIO.read(new File("img/five.png"));
+                return ImageIO.read(getClass().getResource("/img/five.png"));
             case 6:
                 if (orientation == Bone.VERTICAL) {
-                    return ImageIO.read(new File("img/sixV.png"));
+                    return ImageIO.read(getClass().getResource("/img/sixV.png"));
                 }
-                return ImageIO.read(new File("img/sixH.png"));
+                return ImageIO.read(getClass().getResource("/img/sixH.png"));
             default:
                 throw new IllegalArgumentException();
         }
